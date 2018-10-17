@@ -11,7 +11,7 @@ var _axios = require('./services/axios');
 
 var _config = require('./config');
 
-var url = (0, _config.getUrl)('api');
+var url = (0, _config.getUrl)('marketplace');
 
 var _axiosConstructor = (0, _axios.axiosConstructor)(url),
     _axiosConstructor2 = _slicedToArray(_axiosConstructor, 5);
