@@ -1,7 +1,7 @@
 {
   "name": "api-connect",
   "version": "1.0.0",
-  "main": "dist/config.js",
+  "main": "dist",
   "license": "MIT",
   "scripts": {
     "start": "rollup --format cjs",
