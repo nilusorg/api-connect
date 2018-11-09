@@ -9,12 +9,13 @@ export const getUrl = url => {
 }
 
 export const apiConnectConfig = _urls => {
-  const { api, marketplace } = _urls
+  const { api, marketplace, user } = _urls
 
   urls = _urls
 
   return {
     api,
-    marketplace
+    marketplace,
+    user
   }
 }
