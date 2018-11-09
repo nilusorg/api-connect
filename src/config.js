@@ -2,7 +2,7 @@ let urls = {}
 
 export const getUrl = url => {
   if (!urls.hasOwnProperty(url)) {
-    throw Error(`You need to define a url for ${url} before calling it.`)
+    throw Error(`You need to define a url for ${url} before using it.`)
   }
 
   return urls[url]
