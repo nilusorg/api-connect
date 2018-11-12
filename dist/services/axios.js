@@ -26,11 +26,14 @@ var handleUnauthorized = function handleUnauthorized(response) {
 
 var axios = function axios(method, path, data, responseType, url) {
   var TOKEN = localStorage.getItem('token');
+  var NETWORK = localStorage.getItem('active_network');
+
   return _axios2.default.create({
     baseURL: url + '/',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Token ' + TOKEN
+      'Authorization': 'Token ' + TOKEN,
+      'X-Network-Id': NETWORK
     }
   }).request({
     responseType: responseType || 'json',
