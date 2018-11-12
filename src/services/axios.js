@@ -13,12 +13,15 @@ const handleUnauthorized = response => {
 
 const axios = (method, path, data, responseType, url) => {
   const TOKEN = localStorage.getItem('token')
+  const NETWORK = localStorage.getItem('active_network')
+
   return Axios
     .create({
       baseURL: url + '/',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Token ${TOKEN}`
+        'Authorization': `Token ${TOKEN}`,
+        'X-Network-Id': NETWORK
       },
     })
     .request({
